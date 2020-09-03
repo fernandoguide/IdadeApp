@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Idade App</string>
+    <string name="bem_vindo_ao_app_da_idade">Bem vindo ao app da idade</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="nome">Nome</string>
+    <string name="enviar">Enviar</string>
+    <string name="digite_a_sua_idade">Digite a sua idade:</string>
+</resources>
