@@ -19,33 +19,33 @@
 
     <Button
         android:id="@+id/btn_Enviar"
-        android:layout_width="256dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
         android:onClick="enviar"
         android:text="@string/enviar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txv_Idade" />
 
     <EditText
         android:id="@+id/etn_Idade"
-        android:layout_width="111dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="74dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="56dp"
         android:autofillHints=""
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberSigned"
         android:maxLength="4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ttp_Sobrenome" />
 
     <TextView
         android:id="@+id/txv_Resposta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
         android:text=""
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,13 +57,13 @@
 
     <TextView
         android:id="@+id/txv_Idade"
-        android:layout_width="219dp"
+        android:layout_width="259dp"
         android:layout_height="39dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/digite_a_sua_idade"
-        android:textSize="25sp"
+        android:layout_marginTop="16dp"
+        android:text="@string/digite_o_ano_nascimento"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/etn_Idade"
-        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintHorizontal_bias="0.807"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ttp_Sobrenome" />
 
@@ -71,14 +71,14 @@
         android:id="@+id/ttp_Sobrenome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/sobrenome"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ttp_Nome" />
 
@@ -86,15 +86,15 @@
         android:id="@+id/ttp_Nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:autofillHints=""
         android:ems="10"
+        android:focusable="true"
         android:hint="@string/nome"
         android:inputType="textPersonName"
         android:text=""
-        android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txv_BemVindo" />
 

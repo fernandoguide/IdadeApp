@@ -4,5 +4,5 @@
     <string name="sobrenome">Sobrenome</string>
     <string name="nome">Nome</string>
     <string name="enviar">Enviar</string>
-    <string name="digite_a_sua_idade">Digite a sua idade:</string>
+    <string name="digite_o_ano_nascimento">Digite o ano em que nasceu:</string>
 </resources>
