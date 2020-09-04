@@ -26,22 +26,21 @@ class MainActivity : AppCompatActivity() {
             val ano = etn_Idade.text.toString()
             val camposValidos = validarCampos(nome,sobreNome,ano)
             if(camposValidos)
-                respostaIdade(resposta.toString(),nome,sobreNome)
+                respostaIdade(resposta,nome,sobreNome)
         }else {
-            Toast.makeText(this, "O ano deve conter 4 digitos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "O ano não pode ser vazio!", Toast.LENGTH_SHORT).show()
         }
-
-
-
     }
 
-    private fun respostaIdade(resposta: String,nome:String, sobreNome: String) {
-        if (resposta > "18") {
-            txv_Resposta.text = "${nome} ${sobreNome} a sua idade é : ${resposta} anos! Já pode dirigir!!"
-            txv_Resposta.setTextColor(Color.GREEN)
-        } else if (resposta < "18") {
-            txv_Resposta.text = "${nome} ${sobreNome} a sua idade é : ${resposta} anos! Você ainda é menor de idade!"
+    private fun respostaIdade(resposta: Int,nome:String, sobreNome: String) {
+        if (resposta > 18) {
+            txv_Resposta.text = "$nome $sobreNome a sua idade é : $resposta anos! " +
+                    "\nParabens Já pode dirigir!!"
             txv_Resposta.setTextColor(Color.BLUE)
+        } else if (resposta < 18) {
+            txv_Resposta.text = "$nome $sobreNome a sua idade é : $resposta anos! " +
+                    "\nVocê ainda é menor de idade!"
+            txv_Resposta.setTextColor(Color.RED)
         }
     }
 
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             return false
         }
         if(nome.equals("")){
-            Toast.makeText(this, "O nome nao pode ser vazio", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "O nome não pode ser vazio", Toast.LENGTH_SHORT).show()
             return false
         }
         if (sobreNome.length < 3) {
@@ -59,11 +58,11 @@ class MainActivity : AppCompatActivity() {
             return false
         }
         if(sobreNome.equals("")){
-            Toast.makeText(this, "O sobrenome nao pode ser vazio", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "O sobrenome não pode ser vazio", Toast.LENGTH_SHORT).show()
             return false
         }
         if(ano.equals("") ){
-            Toast.makeText(this, "O ano nao pode ser vazio", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "O ano não pode ser vazio", Toast.LENGTH_SHORT).show()
             return false
         }
         if(ano.length != 4 ){
